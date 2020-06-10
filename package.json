@@ -16,6 +16,9 @@
 		"gatsby-tinacms-git": "^0.5.3",
 		"gatsby-tinacms-remark": "^0.8.2",
 		"gatsby-tinacms-json": "^0.8.27",
+		"gatsby-plugin-preact",
+		"preact",
+		"preact-render-to-string",
 		"styled-components": "^5.1.0"
 	}
 }
