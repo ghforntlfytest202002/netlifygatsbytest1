@@ -1,6 +1,4 @@
 module.exports = {
-	pathPrefix: '/',
-	siteMetadata: require('./site-metadata.json'),
 	plugins: [
 		{
 			resolve: 'gatsby-plugin-tinacms',
