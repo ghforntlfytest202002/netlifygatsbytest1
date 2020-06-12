@@ -1,0 +1,9 @@
+{% extends "body.html" %}
+
+{% block content %}
+  {% if page.params.message %}
+    <div>
+	  {{ page.params.message }}
+    </div>
+  {% endif %}
+{% endblock %}
