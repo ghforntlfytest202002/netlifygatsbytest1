@@ -5,7 +5,8 @@
 	"scripts" : {
 		"build": "unibit build",
 		"develop": "unibit develop",
-		"start": "unibit develop"
+		"start": "unibit develop",
+		"serve": "unibit develop"
 	},
 	"dependencies" : {
 		"@stackbit/unibit": ">=0.1.18"
