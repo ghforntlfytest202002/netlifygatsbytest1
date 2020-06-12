@@ -1,5 +1,4 @@
 ---
+message: Hello World
 template: xyzzy
-layout: xyzzy
-message: "Hello World!"
 ---
