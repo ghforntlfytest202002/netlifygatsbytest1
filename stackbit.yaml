@@ -1,6 +1,6 @@
 pagesDir: content
 publishDir: public
-pageLayoutKey: template
+pageLayoutKey: layout
 buildCommand: unibit build
 staticDir: static
 uploadDir: files
