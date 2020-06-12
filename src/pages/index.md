@@ -1,4 +1,4 @@
 ---
 message: Hello World
-layout: xyzzy
+template: xyzzy
 ---

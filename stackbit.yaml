@@ -1,11 +1,13 @@
-pagesDir: content
+stackbitVersion: ~0.2.0
+ssgName: gatsby
+ssgVersion: 0.1.12
+buildCommand: ./ssg-build.sh
 publishDir: public
-pageLayoutKey: layout
-buildCommand: unibit build
 staticDir: static
 uploadDir: files
-stackbitVersion: ~0.2.0
-ssgName: unibit
+dataDir: src/data
+pagesDir: src/pages
+pageLayoutKey: template
 models:
   xyzzy:
     type: page
