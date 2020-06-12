@@ -8,6 +8,6 @@
 		"start": "unibit develop"
 	},
 	"dependencies" : {
-		"@stackbit/unibit": ">=2.22.15"
+		"@stackbit/unibit": ">=0.1.18"
 	}
 }
