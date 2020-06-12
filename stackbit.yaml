@@ -1,0 +1,19 @@
+pagesDir: content
+publishDir: public
+pageLayoutKey: template
+buildCommand: npm run build
+staticDir: static
+uploadDir: files
+stackbitVersion: ~0.2.0
+ssgName: unibit
+models:
+    xyzzy:
+        type: page
+        label: X Y ZZ Y
+        layout: xyzzy
+        fields:
+          - type: string
+            name: message
+            label: Message
+            description: The phrase you would like to display
+            required: true

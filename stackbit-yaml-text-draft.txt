@@ -1,5 +1,0 @@
-pagesDir: content
-publishDir: public
-pageLayoutKey: template
-buildCommand: unibit build
-staticDir: static
