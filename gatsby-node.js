@@ -2,7 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { `createNodeField` } = actions
+  const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
 	const urlSuffixIdea = createFilePath({ node, getNode, basePath: `pages` })
 	createNodeField({
