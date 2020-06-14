@@ -1,3 +1,6 @@
-exports.onCreateNode = ({ node }) => {
-  console.log('Node Internal Type: ' + node.internal.type)
-}
+exports.onCreateNode = ({ node, getNode }) => {
+  console.log('Node Internal Type: ' + node.internal.type + '; Node name: ' + node.name)
+};
+
+exports.createPages = ({ graphql, actions }) => {
+};
