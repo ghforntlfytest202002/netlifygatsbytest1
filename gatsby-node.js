@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
 			  frontmatter {
 				template,
 				message
+			  }
 			}
 		  }
 	  }
