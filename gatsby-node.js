@@ -37,5 +37,5 @@ exports.createPages = async ({ graphql, actions }) => {
 	    frontmatter: node.frontmatter,
 	  },
     })
-  }
+  })
 };
