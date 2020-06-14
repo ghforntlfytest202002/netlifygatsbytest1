@@ -22,7 +22,10 @@ exports.createPages = async ({ graphql, actions }) => {
 			node {
 			  fields {
 				suggestedURLSuffix
-			  }
+			  },
+			  frontmatter {
+				template,
+				message
 			}
 		  }
 	  }
