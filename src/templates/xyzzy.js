@@ -1,9 +1,9 @@
 import React from "react"
 
+import BasicDiv from '../components/basicDiv.js';
+
 export default function Xyzzy({ pageContext }) {
   return (
-    <div>
-	  {pageContext.frontmatter.message}
-    </div>
+    <Layout {pageContext.frontmatter.message} />
   )
 }
