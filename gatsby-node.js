@@ -29,15 +29,14 @@ exports.createPages = async ({ graphql, getNode, actions }) => {
 	  }
 	}
   `)
-  nodes = queryResult.data.allMarkdownRemark.edges.map((graphQLNode) =>
-	getNode(graphQLNode.id)
-  );
+  nodes = queryResult.data.allMarkdownRemark.edges
   nodes.forEach(({ node }) => {
+	const freshNode = getNode(node.id);
     createPage({
 	  path: node.fields.suggestedURLSuffix,
-	  component: path.resolve(`./src/templates/${node.frontmatter.template}.js`),
+	  component: path.resolve(`./src/templates/${freshNode.frontmatter.template}.js`),
 	  context: {
-	    frontmatter: node.frontmatter,
+	    frontmatter: freshNode.frontmatter,
 	  },
     })
   })
