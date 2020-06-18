@@ -13,7 +13,7 @@ export default function Task(props) {
 	  {' '}
 	  <b>{props.taskDetail.task}</b>
 	  { props.taskDetail.how.length > 0 && 
-  	    <i>{' '}{props.taskDetail.how</i>
+  	    <i>{' '}{props.taskDetail.how}</i>
 	  }
     </div>
   )
