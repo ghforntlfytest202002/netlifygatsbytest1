@@ -5,11 +5,11 @@ import sectionComponentTypeList from '../components/indexSectionComponents.js';
 
 export default function Xyzzy({ pageContext }) {
   const sections = pageContext.frontmatter.sections;
-  const SectionComponents = sections.map((section) =>
-	let rawComponent = sectionComponentTypeList[section.type];
-	return (
+  const rawSectionComponents = sections.map((section) =>
+	sectionComponentTypeList[section.type];
+  );
+  const SectionComponents = rawSectionComponents.map((Component) =>
 	  <Component section={section} />
-	)
   );
   return (
     <LayoutHello>
