@@ -3,9 +3,9 @@ import React from "react"
 export default function Task(props) {
   let checkboxSymbol;
   if (props.taskDetail.done) {
-	checkboxSymbol = {'✓'};
+	checkboxSymbol = '✓';
   } else {
-	checkboxSymbol = {'X'}
+	checkboxSymbol = 'X';
   }
   return (
     <div className="task">
