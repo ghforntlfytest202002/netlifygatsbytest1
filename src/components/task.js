@@ -9,14 +9,12 @@ export default function Task(props) {
   }
   return (
     <div className="task">
-	<b>{checkboxSymbol}</b>
-	{' '}
-	<b>{props.taskDetail.task}</b>
-	{ props.taskDetail.how.length > 0 && 
-	  <i>{' '}{props.taskDetail.how</i>
-	} {}      - task: eat
-        done: true
-        how: well{props.taskDetail.how}
+	  <b>{checkboxSymbol}</b>
+	  {' '}
+	  <b>{props.taskDetail.task}</b>
+	  { props.taskDetail.how.length > 0 && 
+  	    <i>{' '}{props.taskDetail.how</i>
+	  }
     </div>
   )
 }
