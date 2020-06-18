@@ -13,26 +13,25 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, getNode, actions }) => {
   const { createPage } = actions
   const queryResult = await graphql(`
 	query {
 	  allMarkdownRemark {
 		  edges {
 			node {
+			  id,
 			  fields {
 				suggestedURLSuffix
-			  },
-			  frontmatter {
-				template,
-				message
 			  }
 			}
 		  }
 	  }
 	}
   `)
-  nodes = queryResult.data.allMarkdownRemark.edges
+  nodes = queryResult.data.allMarkdownRemark.edges.map((graphQLNode) =>
+	getNode(graphQLNode.id)
+  );
   nodes.forEach(({ node }) => {
     createPage({
 	  path: node.fields.suggestedURLSuffix,
