@@ -7,8 +7,9 @@ export default function Task(props) {
   } else {
 	checkboxSymbol = 'X';
   }
+  const classes = `task round-lg ${props.alternatingClassName}`
   return (
-    <div className="task">
+    <div className={classes}>
 	  <b>{checkboxSymbol}</b>
 	  {' '}
 	  <b>{props.taskDetail.task}</b>

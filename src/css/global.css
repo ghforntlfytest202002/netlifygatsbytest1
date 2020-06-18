@@ -2,7 +2,19 @@ html {
   background-color: lavenderblush;
 }
 
+.pink-div {
+	background-color: pink;
+}
+
 .blue-div {
 	background-color: blue;
 	color: white;
+}
+
+.task.task-odd {
+	color: orchid4;
+}
+
+.task.task-even {
+	color: springgreen4;
 }
