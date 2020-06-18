@@ -12,7 +12,7 @@ export default function Task(props) {
 	  <b>{checkboxSymbol}</b>
 	  {' '}
 	  <b>{props.taskDetail.task}</b>
-	  { props.taskDetail.how.length > 0 && 
+	  { props.taskDetail.how && 
   	    <i>{' '}{props.taskDetail.how}</i>
 	  }
     </div>
