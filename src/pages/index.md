@@ -1,8 +1,6 @@
 ---
 template: xyzzy
 sections:
-  - type: SectionBlue
-    mention: Hello World
   - type: SectionPink
     say: I did it!
     goal: Figure out how Stackbit eliminated an underscore from this section type specification.
@@ -22,4 +20,6 @@ sections:
       - task: hydrate
         done: true
         how: regularly
+  - type: SectionBlue
+    mention: Hello World
 ---
