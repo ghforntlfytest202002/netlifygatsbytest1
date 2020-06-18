@@ -3,7 +3,7 @@ template: xyzzy
 sections:
   - type: SectionPink
     say: I did it!
-	goal: Figure out how Stackbit eliminated an underscore from this section type specification.
+    goal: Figure out how Stackbit eliminated an underscore from this section type specification.
   - type: SectionTaskList
     accomplishments:
       - task: eat
