@@ -6,7 +6,7 @@ import sectionComponentTypeList from '../components/indexSectionComponents.js';
 export default function Xyzzy({ pageContext }) {
   const sections = pageContext.frontmatter.sections;
   const rawSectionComponents = sections.map((section) =>
-	sectionComponentTypeList[section.type];
+	sectionComponentTypeList[section.type]
   );
   const SectionComponents = rawSectionComponents.map((Component) =>
 	  <Component section={section} />
