@@ -1,9 +1,21 @@
 import React from "react"
 
-import BasicDiv from '../components/basicDiv.js';
+import LayoutHello from '../components/layoutHello.js';
+import sectionComponentTypeList from '../components/indexSectionComponents.js';
 
 export default function Xyzzy({ pageContext }) {
+  const sections = pageContext.frontmatter.sections;
+  const SectionComponents = sections.map((section) =>
+	let rawComponent = sectionComponentTypeList[section.type];
+	return (
+	  <Component section={section} />
+	)
+  );
   return (
-    <BasicDiv messageToDisplay={pageContext.frontmatter.message} />
+    <LayoutHello>
+	  <div className='xyzzy'>
+	    {SectionComponents}
+	  </div>
+	</LayoutHello>
   )
 }
