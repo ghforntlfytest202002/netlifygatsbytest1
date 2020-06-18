@@ -1,20 +1,19 @@
-html {
-  background-color: lavenderblush;
-}
-
 .pink-div {
-	background-color: pink;
+	background-color: #d81b60;
+	color: black;
 }
 
 .blue-div {
-	background-color: blue;
+	background-color: #1e88e5;
 	color: white;
 }
 
 .task.task-odd {
-	color: orchid4;
+	background-color: #ffc107;
+	color: black;
 }
 
 .task.task-even {
-	color: springgreen4;
+	color: #004d40;
+	color: white;
 }
