@@ -23,9 +23,20 @@ models:
             - section_pink
             - section_task_list
             - section_blue
+  section:
+    type: object
+    label: Section
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title
   section_task_list:
     type: object
     label: Accomplishments Section
+    extends:
+      - section
     fields:
       - type: list
         name: accomplishments
@@ -35,6 +46,8 @@ models:
   section_blue:
     type: object
     label: Blue Section
+    extends:
+      - section
     fields:
       - type: text
         name: mention
@@ -43,6 +56,8 @@ models:
   section_pink:
     type: object
     label: Pink Section
+    extends:
+      - section
     fields:
         - type: string
           name: say
