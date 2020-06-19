@@ -25,10 +25,6 @@ models:
     type: object
     label: Accomplishments Section
     fields:
-      - type: enum
-        name: type
-        label: Type
-        options: [section_task_list]
       - type: list
         name: accomplishments
         label: Accomplishment Items
@@ -38,10 +34,6 @@ models:
     type: object
     label: Blue Section
     fields:
-      - type: enum
-        name: type
-        label: Type
-        options: [section_blue]
       - type: text
         name: mention
         label: Mention something
@@ -50,10 +42,6 @@ models:
     type: object
     label: Pink Section
     fields:
-        - type: enum
-          name: type
-          label: Type
-          options: [section_pink]
         - type: string
           name: say
           label: Say what now?
