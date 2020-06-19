@@ -39,6 +39,7 @@ exports.createPages = async ({ graphql, getNode, actions }) => {
 	  path: node.fields.suggestedURLSuffix,
 	  component: path.resolve(`./src/templates/${freshNode.frontmatter.template}.js`),
 	  context: {
+	    suggestedURLSuffix: suggestedURLSuffix,
 	    frontmatter: freshNode.frontmatter,
 	  },
     })
