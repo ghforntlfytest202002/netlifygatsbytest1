@@ -68,7 +68,7 @@ models:
     label: Accomplishment Item
     labelField: task
     fields:
-      - type: text
+      - type: string
         name: task
         label: Task
         required: true
@@ -76,6 +76,6 @@ models:
         name: done
         label: Done?
         required: true
-      - type: text
+      - type: string
         name: how
         label: How?
