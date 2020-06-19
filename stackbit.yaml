@@ -40,7 +40,7 @@ models:
       - section
     fields:
       - type: list
-        name: accomplishment_items
+        name: accomplishments
         label: Accomplishment Items
         items:
           type: accomplishment_item
