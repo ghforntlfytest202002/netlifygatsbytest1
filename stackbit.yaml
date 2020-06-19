@@ -54,6 +54,7 @@ models:
         name: mention
         label: Mention something
         description: The text content of the section
+        required: true
   section_pink:
     type: object
     label: Pink Section
@@ -64,6 +65,7 @@ models:
         name: say
         label: 'Say what now?'
         description: The text content of the section
+        required: true
   accomplishment:
     type: object
     label: Accomplishment
