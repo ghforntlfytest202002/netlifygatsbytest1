@@ -17,14 +17,12 @@ models:
         name: sections
         label: Sections
         items:
-          type: object
-          fields:
-            - type: model
-              labelField: title
-              models:
-                - section_pink
-                - section_task_list
-                - section_blue
+          type: model
+          labelField: title
+          models:
+            - section_pink
+            - section_task_list
+            - section_blue
   section_task_list:
     type: object
     label: Accomplishments Section
