@@ -18,7 +18,7 @@ models:
         label: Sections
         description: Page sections
         items:
-          type: reference
+          type: model
           labelField: title
           models:
             - section_task_list
