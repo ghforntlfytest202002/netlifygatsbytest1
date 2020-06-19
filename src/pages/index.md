@@ -1,10 +1,11 @@
 ---
 template: xyzzy
 sections:
-  - type: SectionPink
+  - type: section_pink
     say: I did it!
     goal: Figure out how Stackbit eliminated an underscore from this section type specification.
-  - type: SectionTaskList
+	answer: Lodash camelcase strips underscores.
+  - type: section_task_list
     accomplishments:
       - task: eat
         done: true
@@ -20,6 +21,6 @@ sections:
       - task: hydrate
         done: true
         how: regularly
-  - type: SectionBlue
+  - type: section_blue
     mention: Hello World
 ---

@@ -33,7 +33,7 @@ models:
         name: title
         label: Title
         description: The title of the section
-  sectiontasklist:
+  section_task_list:
     type: object
     label: Accomplishments Section
     extends:
@@ -44,7 +44,7 @@ models:
         label: Accomplishment Items
         items:
           type: accomplishment_item
-  sectionblue:
+  section_blue:
     type: object
     label: Blue Section
     extends:
@@ -54,7 +54,7 @@ models:
         name: mention
         label: Mention something
         description: The text content of the section
-  sectionpink:
+  section_pink:
     type: object
     label: Pink Section
     extends:
