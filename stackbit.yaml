@@ -1,5 +1,5 @@
 stackbitVersion: ~0.2.0
-ssgName: gatsby
+ssgName: custom
 buildCommand: gatsby build
 publishDir: public
 staticDir: static
