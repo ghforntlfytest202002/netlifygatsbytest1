@@ -1,5 +1,6 @@
 ---
 template: xyzzy
+miscfield: What now
 sections:
   - type: section_pink
     say: I did it!
