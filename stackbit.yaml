@@ -17,14 +17,16 @@ models:
         name: sections
         label: Sections
         items:
-          - type: reference
-            name: sections
-            label: Sections
-            description: Page sections
-            models:
-              - section_pink
-              - section_task_list
-              - section_blue
+          - type: object
+            fields:
+            - type: reference
+              name: sections
+              label: Sections
+              description: Page sections
+              models:
+                - section_pink
+                - section_task_list
+                - section_blue
   section_task_list:
     type: object
     label: Accomplishments Section
