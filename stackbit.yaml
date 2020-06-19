@@ -43,7 +43,7 @@ models:
         name: accomplishment_items
         label: Accomplishment Items
         items:
-          type: task
+          type: accomplishment_item
   section_blue:
     type: object
     label: Blue Section
@@ -64,7 +64,7 @@ models:
         name: say
         label: 'Say what now?'
         description: The text content of the section
-  task:
+  accomplishment_item:
     type: object
     label: Accomplishment Item
     fields:
