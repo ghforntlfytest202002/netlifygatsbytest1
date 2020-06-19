@@ -42,7 +42,7 @@ models:
         name: accomplishments
         label: Accomplishment Items
         items:
-          type: accomplishments_tem
+          type: accomplishments_item
   section_blue:
     type: object
     label: Blue Section
@@ -68,7 +68,7 @@ models:
         - type: text
           name: answer
           label: Answer
-  accomplishments_tem:
+  accomplishments_item:
     type: object
     label: Accomplishment Item
     labelField: task
