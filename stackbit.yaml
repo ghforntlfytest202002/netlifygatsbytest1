@@ -21,9 +21,9 @@ models:
           type: model
           labelField: title
           models:
-            - section_pink
-            - section_task_list
-            - section_blue
+            - bar
+            - baz
+            - box
   section:
     type: object
     label: Section
@@ -33,7 +33,7 @@ models:
         name: title
         label: Title
         description: The title
-  section_task_list:
+  bar:
     type: object
     label: Accomplishments Section
     extends:
@@ -44,7 +44,7 @@ models:
         label: Accomplishment Items
         items:
           type: accomplishments_item
-  section_blue:
+  baz:
     type: object
     label: Blue Section
     extends:
@@ -54,7 +54,7 @@ models:
         name: mention
         label: Mention something
         description: The text content of the section
-  section_pink:
+  box:
     type: object
     label: Pink Section
     extends:
