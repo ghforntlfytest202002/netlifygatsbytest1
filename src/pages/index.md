@@ -1,29 +1,25 @@
 ---
 template: xyzzy
 sections:
-  - type: SectionBlue
-    mention: Hello beautiful world.
   - type: SectionPink
-    say: Wow, I did it!
+    say: I did it!
+    goal: Figure out how Stackbit eliminated an underscore from this section type specification.
   - type: SectionTaskList
     accomplishments:
-      - task: stretch
-        done: true
-        how: gracefully
       - task: eat
         done: true
         how: well
-      - task: write
-        done: false
       - task: sleep
         done: false
         how: soundly
       - task: jump
-        done: false
+        done: true
         how: high
+      - task: write
+        done: true
       - task: hydrate
         done: true
         how: regularly
-  - type: SectionPink
-    say: I'm proud of me.
+  - type: SectionBlue
+    mention: Hello World
 ---

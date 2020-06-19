@@ -1,0 +1,86 @@
+stackbitVersion: >=0.2.0
+ssgName: gatsby
+buildCommand: gatsby build
+publishDir: public
+staticDir: static
+uploadDir: src/uploads
+pagesDir: src/pages
+pageLayoutKey: template
+models:
+  xyzzy:
+    type: page
+    label: X Y ZZ Y
+    layout: xyzzy
+    hideContent: true
+    fields:
+      - type: list
+        name: sections
+        label: Sections
+        description: Page sections
+        items:
+          type: reference
+          labelField: title
+          models:
+            - SectionTaskList
+            - SectionBlue
+            - SectionPink
+  section:
+    type: object
+    label: Section
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+  SectionTaskList:
+    type: object
+    label: Accomplishments Section
+    extends:
+      - section
+    fields:
+      - type: list
+        name: accomplishment_items
+        label: Accomplishment Items
+        items:
+          type: accomplishment_item
+  SectionBlue:
+    type: object
+    label: Blue Section
+    extends:
+      - section
+    fields:
+      - type: text
+        name: mention
+        label: Mention something
+        description: The text content of the section
+  SectionPink:
+    type: object
+    label: Pink Section
+    extends:
+      - section
+    fields:
+      - type: text
+        name: say
+        label: 'Say what now?'
+        description: The text content of the section
+  accomplishment_item:
+    type: object
+    label: Accomplishment Item
+    fields:
+      - type: text
+        name: task
+        label: Task
+        required: true
+      - type: boolean
+        name: done
+        label: Done?
+        required: true
+      - type: text
+        name: how
+        label: How?
+      - type: datetime
+        name: experiment
+        label: Pick a time without a datetime
+        dateFormat: false
+        timeFormat: 'HH:mm'
