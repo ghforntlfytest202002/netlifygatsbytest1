@@ -17,8 +17,8 @@ models:
         name: sections
         label: Sections
         items:
-          - type: object
-            fields:
+          type: object
+          fields:
             - type: reference
               name: sections
               label: Sections
