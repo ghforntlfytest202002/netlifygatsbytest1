@@ -27,8 +27,8 @@ function Xyzzy({ pageContext }) {
 }
 
 export const pageQuery = graphql`
-  query XyzzyById($id: String!) {
-    markdownRemark(fields: { id: { eq: $id } }) {
+  query XyzzyById($suggestedURLSuffix: String!) {
+    markdownRemark(fields: { suggestedURLSuffix: { eq: $suggestedURLSuffix } }) {
       id
       frontmatter {
         miscfield
