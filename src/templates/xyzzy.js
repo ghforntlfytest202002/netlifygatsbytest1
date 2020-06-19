@@ -4,7 +4,7 @@ import _ from 'lodash';
 import LayoutHello from '../components/layoutHello.js';
 import sectionComponentTypeList from '../components/indexSectionComponents.js';
 
-export default function Xyzzy({ pageContext }) {
+function Xyzzy({ pageContext }) {
   const sections = pageContext.frontmatter.sections;
   const SectionComponents = sections.map((section) => {
     let sectionType = _.upperFirst(_.camelCase(_.get(section, 'type')));
@@ -21,3 +21,5 @@ export default function Xyzzy({ pageContext }) {
 	</LayoutHello>
   )
 }
+
+export {Xyzzy as default};
