@@ -21,9 +21,9 @@ models:
           type: reference
           labelField: title
           models:
-            - SectionTaskList
-            - SectionBlue
-            - SectionPink
+            - sectionTaskList
+            - sectionBlue
+            - sectionPink
   section:
     type: object
     label: Section
@@ -33,7 +33,7 @@ models:
         name: title
         label: Title
         description: The title of the section
-  SectionTaskList:
+  sectionTaskList:
     type: object
     label: Accomplishments Section
     extends:
@@ -44,7 +44,7 @@ models:
         label: Accomplishment Items
         items:
           type: accomplishment_item
-  SectionBlue:
+  sectionBlue:
     type: object
     label: Blue Section
     extends:
@@ -54,7 +54,7 @@ models:
         name: mention
         label: Mention something
         description: The text content of the section
-  SectionPink:
+  sectionPink:
     type: object
     label: Pink Section
     extends:
@@ -79,8 +79,3 @@ models:
       - type: text
         name: how
         label: How?
-      - type: datetime
-        name: experiment
-        label: Pick a time without a datetime
-        dateFormat: false
-        timeFormat: 'HH:mm'
