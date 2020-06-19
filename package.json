@@ -1,7 +1,7 @@
 {
-	"name" : "netlify-gatsby-test-04",
+	"name" : "netlify-gatsby-test-05",
 	"description" : "Does this really work?",
-	"version" : "0.0.4",
+	"version" : "0.0.5",
 	"scripts" : {
 		"develop": "gatsby develop",
 		"start": "npm run develop",
@@ -12,6 +12,10 @@
 		"gatsby": ">=2.22.15",
 		"gatsby-source-filesystem": ">=2.3.11",
 		"gatsby-transformer-remark": ">=2.8.15",
+		"gatsby-plugin-tinacms": ">=0.2.1",
+		"gatsby-tinacms-git": ">=0.5.3",
+		"styled-components": ">=5.1.0",
+		"gatsby-tinacms-remark": ">=0.8.2",
 		"lodash": ">=4.17.15",
 		"react": ">=16.12.0",
 		"react-dom": ">=16.12.0"
