@@ -63,12 +63,13 @@ models:
     fields:
       - type: string
         name: say
-        label: 'Say what now?'
+        label: Say what now?
         description: The text content of the section
         required: true
   accomplishment:
     type: object
     label: Accomplishment
+    labelField: task
     fields:
       - type: string
         name: task
