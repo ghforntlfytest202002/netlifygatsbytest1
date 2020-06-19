@@ -13,60 +13,60 @@ models:
     layout: xyzzy
     hideContent: true
     fields:
-      - type: list
+      - type: reference
         name: sections
         label: Sections
         description: Page sections
-        items:
-          type: reference
-          labelField: title
-          models:
-            - section_task_list
-            - section_blue
-            - section_pink
-  section:
-    type: object
-    label: Section
-    labelField: title
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the section
-  section_task_list:
+        models:
+          - sectionPink
+          - sectionTaskList
+          - sectionBlue
+  sectionTaskList:
     type: object
     label: Accomplishments Section
-    extends:
-      - section
     fields:
+      - type: enum
+        name: type
+        label: Type
+        options: [section_task_list]
       - type: list
-        name: accomplishment_items
+        name: accomplishments
         label: Accomplishment Items
         items:
-          type: accomplishment_item
-  section_blue:
+          type: accomplishmentItem
+  sectionBlue:
     type: object
     label: Blue Section
-    extends:
-      - section
     fields:
+      - type: enum
+        name: type
+        label: Type
+        options: [section_blue]
       - type: text
         name: mention
         label: Mention something
         description: The text content of the section
-  section_pink:
+  sectionPink:
     type: object
     label: Pink Section
-    extends:
-      - section
     fields:
-      - type: text
-        name: say
-        label: 'Say what now?'
-        description: The text content of the section
-  accomplishment_item:
+        - type: enum
+          name: type
+          label: Type
+          options: [section_pink]
+        - type: string
+          name: say
+          label: Say what now?
+        - type: text
+          name: goal
+          label: Goal
+        - type: text
+          name: answer
+          label: Answer
+  accomplishmentItem:
     type: object
     label: Accomplishment Item
+    labelField: task
     fields:
       - type: text
         name: task
