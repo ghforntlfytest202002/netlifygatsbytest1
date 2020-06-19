@@ -1,5 +1,5 @@
 stackbitVersion: ~0.3.0
-ssgName: gatsby
+ssgName: custom
 buildCommand: gatsby build
 publishDir: public
 staticDir: static
@@ -50,7 +50,7 @@ models:
     extends:
       - section
     fields:
-      - type: text
+      - type: string
         name: mention
         label: Mention something
         description: The text content of the section
@@ -61,7 +61,7 @@ models:
     extends:
       - section
     fields:
-      - type: text
+      - type: string
         name: say
         label: 'Say what now?'
         description: The text content of the section
@@ -70,7 +70,7 @@ models:
     type: object
     label: Accomplishment
     fields:
-      - type: text
+      - type: string
         name: task
         label: Task
         required: true
@@ -78,6 +78,6 @@ models:
         name: done
         label: Done?
         required: true
-      - type: text
+      - type: string
         name: how
         label: How?
