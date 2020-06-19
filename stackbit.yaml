@@ -23,64 +23,64 @@ models:
             - section_pink
             - section_task_list
             - section_blue
-section:
-  type: object
-  label: Section
-  labelField: title
-  fields:
-    - type: string
-      name: title
-      label: Title
-      description: The title
-section_task_list:
-  type: object
-  label: Accomplishments Section
-  extends:
-    - section
-  fields:
-    - type: list
-      name: accomplishments
-      label: Accomplishment Items
-      items:
-        type: accomplishments_tem
-section_blue:
-  type: object
-  label: Blue Section
-  extends:
-    - section
-  fields:
-    - type: text
-      name: mention
-      label: Mention something
-      description: The text content of the section
-section_pink:
-  type: object
-  label: Pink Section
-  extends:
-    - section
-  fields:
+  section:
+    type: object
+    label: Section
+    labelField: title
+    fields:
       - type: string
-        name: say
-        label: Say what now?
+        name: title
+        label: Title
+        description: The title
+  section_task_list:
+    type: object
+    label: Accomplishments Section
+    extends:
+      - section
+    fields:
+      - type: list
+        name: accomplishments
+        label: Accomplishment Items
+        items:
+          type: accomplishments_tem
+  section_blue:
+    type: object
+    label: Blue Section
+    extends:
+      - section
+    fields:
       - type: text
-        name: goal
-        label: Goal
-      - type: text
-        name: answer
-        label: Answer
-accomplishments_tem:
-  type: object
-  label: Accomplishment Item
-  labelField: task
-  fields:
-    - type: string
-      name: task
-      label: Task
-      required: true
-    - type: boolean
-      name: done
-      label: Done?
-      required: true
-    - type: string
-      name: how
-      label: How?
+        name: mention
+        label: Mention something
+        description: The text content of the section
+  section_pink:
+    type: object
+    label: Pink Section
+    extends:
+      - section
+    fields:
+        - type: string
+          name: say
+          label: Say what now?
+        - type: text
+          name: goal
+          label: Goal
+        - type: text
+          name: answer
+          label: Answer
+  accomplishments_tem:
+    type: object
+    label: Accomplishment Item
+    labelField: task
+    fields:
+      - type: string
+        name: task
+        label: Task
+        required: true
+      - type: boolean
+        name: done
+        label: Done?
+        required: true
+      - type: string
+        name: how
+        label: How?
