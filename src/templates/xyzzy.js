@@ -20,7 +20,7 @@ function Xyzzy({ pageContext }) {
 	    {SectionComponents}
 	  </div>
 	  <div className='xyzzy-two'>
-	    {markdownRemark.frontmatter.miscfield}
+	    Hello World
 	  </div>
 	</LayoutHello>
   )
