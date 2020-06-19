@@ -16,6 +16,7 @@ models:
       - type: list
         name: sections
         label: Sections
+        description: Page sections
         items:
           type: model
           labelField: title
