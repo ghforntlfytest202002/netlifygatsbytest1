@@ -21,6 +21,9 @@ exports.createPages = async ({ graphql, getNode, actions }) => {
 		  edges {
 			node {
 			  id,
+			  fileRelativePath,
+			  rawFrontmatter,
+			  rawMarkdownBody,
 			  fields {
 				suggestedURLSuffix
 			  }
