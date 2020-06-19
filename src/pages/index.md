@@ -2,8 +2,10 @@
 template: xyzzy
 sections:
   - type: section_pink
+    title: foo
     say: I did it!
   - type: section_task_list
+    title: bar
     accomplishments:
       - task: eat
         done: true
@@ -20,5 +22,6 @@ sections:
         done: true
         how: regularly
   - type: section_blue
+    title: baz
     mention: Hello World
 ---

@@ -19,10 +19,8 @@ models:
         items:
           type: object
           fields:
-            - type: reference
-              name: sections
-              label: Sections
-              description: Page sections
+            - type: model
+              labelField: title
               models:
                 - section_pink
                 - section_task_list
