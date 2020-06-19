@@ -21,7 +21,6 @@ exports.createPages = async ({ graphql, getNode, actions }) => {
 		  edges {
 			node {
 			  id,
-			  ...TinaRemark,
 			  fields {
 				suggestedURLSuffix
 			  }
