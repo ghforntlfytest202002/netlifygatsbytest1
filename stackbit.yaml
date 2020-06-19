@@ -1,4 +1,4 @@
-stackbitVersion: ~0.2.0
+stackbitVersion: ~0.3.0
 ssgName: custom
 buildCommand: gatsby build
 publishDir: public
