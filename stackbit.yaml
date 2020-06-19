@@ -21,9 +21,9 @@ models:
           type: reference
           labelField: title
           models:
-            - sectiontasklist
-            - sectionblue
-            - sectionpink
+            - section_task_list
+            - section_blue
+            - section_pink
   section:
     type: object
     label: Section
