@@ -18,10 +18,10 @@ models:
         label: Sections
         description: Page sections
         models:
-          - sectionPink
-          - sectionTaskList
-          - sectionBlue
-  sectionTaskList:
+          - section_pink
+          - section_task_list
+          - section_blue
+  section_task_list:
     type: object
     label: Accomplishments Section
     fields:
@@ -33,8 +33,8 @@ models:
         name: accomplishments
         label: Accomplishment Items
         items:
-          type: accomplishmentItem
-  sectionBlue:
+          type: accomplishments_tem
+  section_blue:
     type: object
     label: Blue Section
     fields:
@@ -46,7 +46,7 @@ models:
         name: mention
         label: Mention something
         description: The text content of the section
-  sectionPink:
+  section_pink:
     type: object
     label: Pink Section
     fields:
@@ -63,7 +63,7 @@ models:
         - type: text
           name: answer
           label: Answer
-  accomplishmentItem:
+  accomplishments_tem:
     type: object
     label: Accomplishment Item
     labelField: task
