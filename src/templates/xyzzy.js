@@ -6,6 +6,7 @@ import LayoutHello from '../components/layoutHello.js';
 import sectionComponentTypeList from '../components/indexSectionComponents.js';
 
 function Xyzzy({ pageContext }) {
+  const debugMe = JSON.stringify(pageContext);
   const sections = pageContext.frontmatter.sections;
   const SectionComponents = sections.map((section) => {
     let sectionType = _.upperFirst(_.camelCase(_.get(section, 'type')));
@@ -20,7 +21,7 @@ function Xyzzy({ pageContext }) {
 	    {SectionComponents}
 	  </div>
 	  <div className='xyzzy-two'>
-	    <h1 dangerouslySetInnerHTML={{ __html: pageContext }} />
+	    <h1 dangerouslySetInnerHTML={{ __html: debugMe }} />
 	  </div>
 	</LayoutHello>
   )
