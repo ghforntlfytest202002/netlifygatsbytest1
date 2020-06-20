@@ -20,7 +20,7 @@ function Xyzzy({ pageContext }) {
 	    {SectionComponents}
 	  </div>
 	  <div className='xyzzy-two'>
-	    {pageContext.data.markdownRemark.frontmatter.miscfield}
+	    <h1 dangerouslySetInnerHTML={{ __html: pageContext }} />
 	  </div>
 	</LayoutHello>
   )
