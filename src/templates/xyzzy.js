@@ -5,8 +5,10 @@ import { remarkForm } from "gatsby-tinacms-remark";
 import LayoutHello from '../components/layoutHello.js';
 import sectionComponentTypeList from '../components/indexSectionComponents.js';
 
-function Xyzzy({ pageContext }) {
+function Xyzzy({ pageContext, data }) {
   const debugMe = JSON.stringify(pageContext);
+  const debugMeToo = JSON.stringify(data);
+  const debugMeThree = debugMe + 'ABCCA' + debugMeToo;
   const sections = pageContext.frontmatter.sections;
   const SectionComponents = sections.map((section) => {
     let sectionType = _.upperFirst(_.camelCase(_.get(section, 'type')));
@@ -21,7 +23,7 @@ function Xyzzy({ pageContext }) {
 	    {SectionComponents}
 	  </div>
 	  <div className='xyzzy-two'>
-	    <h1 dangerouslySetInnerHTML={{ __html: debugMe }} />
+	    <h1 dangerouslySetInnerHTML={{ __html: debugMeThree }} />
 	  </div>
 	</LayoutHello>
   )
