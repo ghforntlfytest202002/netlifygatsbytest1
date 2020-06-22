@@ -10,6 +10,5 @@ module.exports = {
 				overlayDrafts: true,
 			}
 		},
-		`gatsby-transformer-remark`
     ]
 };
