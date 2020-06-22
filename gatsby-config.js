@@ -1,6 +1,6 @@
 module.exports = {
     plugins: [
-		/*{
+		{
 			resolve: "gatsby-source-sanity",
 			options: {
 				projectId: "abc123",
@@ -9,6 +9,6 @@ module.exports = {
 				watchMode: false,
 				overlayDrafts: false,
 			}
-		},*/
+		}
     ]
 };
