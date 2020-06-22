@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, getNode, actions }) => {
   nodes = queryResult.data.allSanityXyzzy.edges
   nodes.forEach(({ node }) => {
     createPage({
-      path: node.slug,
+      path: node.slug.current,
       component: path.resolve(`./src/templates/${node.template}.js`),
       context: {
         message: node.message,
