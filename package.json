@@ -1,7 +1,7 @@
 {
-	"name" : "netlify-gatsby-test-05",
+	"name" : "netlify-gatsby-test-02",
 	"description" : "Does this really work?",
-	"version" : "0.0.5",
+	"version" : "0.0.2",
 	"scripts" : {
 		"develop": "gatsby develop",
 		"start": "npm run develop",
@@ -10,7 +10,8 @@
 	},
 	"dependencies" : {
 		"gatsby": ">=2.22.15",
-		"gatsby-source-sanity": ">=6.0.1",
+		"gatsby-source-filesystem": ">=2.3.11",
+		"gatsby-transformer-remark": ">=2.8.15",
 		"react": ">=16.12.0",
 		"react-dom": ">=16.12.0"
 	}

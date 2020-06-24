@@ -1,30 +1,45 @@
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, getNode, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const urlSuffixIdea = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `suggestedURLSuffix`,
+      value: urlSuffixIdea,
+    })
+  }
+}
+
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const queryResult = await graphql(`
-    query {
-      allSanityXyzzy(filter: {slug: {current: {ne: null}}}) {
-          edges {
-            node {
-              template,
-              message,
-              slug {
-                current
-              }
-            }
-          }
-      }
-    }
+	query {
+	  allMarkdownRemark {
+		  edges {
+			node {
+			  fields {
+				suggestedURLSuffix
+			  },
+			  frontmatter {
+				template,
+				message
+			  }
+			}
+		  }
+	  }
+	}
   `)
-  nodes = queryResult.data.allSanityXyzzy.edges
+  nodes = queryResult.data.allMarkdownRemark.edges
   nodes.forEach(({ node }) => {
     createPage({
-      path: node.slug.current,
-      component: path.resolve(`./src/templates/${node.template}.js`),
-      context: {
-        message: node.message,
-      },
+	  path: node.fields.suggestedURLSuffix,
+	  component: path.resolve(`./src/templates/${node.frontmatter.template}.js`),
+	  context: {
+	    frontmatter: node.frontmatter,
+	  },
     })
   })
 };
